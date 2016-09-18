@@ -11,112 +11,110 @@ def start(message):
     settings(message)
 
 
-def menuEng(message):
-    markup = types.ReplyKeyboardMarkup()
-    answer = types.KeyboardButton('Get the answer')
-    settings = types.KeyboardButton('Settings')
-    markup.row(answer)
-    markup.row(settings)
-    bot.send_message(message.chat.id, 'Ask a question', reply_markup=markup)
-
-
 def answerEng(message):
     r = random.randint(1, 20)
     if (r == 1):
-        bot.send_message(message.chat.id, 'It is certain')
+        a = 'It is certain'
     elif (r == 2):
-        bot.send_message(message.chat.id, 'It is decidedly so')
+        a = 'It is decidedly so'
     elif (r == 3):
-        bot.send_message(message.chat.id, 'Without a doubt')
+        a = 'Without a doubt'
     elif (r == 4):
-        bot.send_message(message.chat.id, 'Yes — definitely')
+        a = 'Yes — definitely'
     elif (r == 5):
-        bot.send_message(message.chat.id, 'You may rely on it')
+        a = 'You may rely on it'
     elif (r == 6):
-        bot.send_message(message.chat.id, 'As I see it, yes')
+        a = 'As I see it, yes'
     elif (r == 7):
-        bot.send_message(message.chat.id, 'Most likely')
+        a = 'Most likely'
     elif (r == 8):
-        bot.send_message(message.chat.id, 'Outlook good')
+        a = 'Outlook good'
     elif (r == 9):
-        bot.send_message(message.chat.id, 'Signs point to yes')
+        a = 'Signs point to yes'
     elif (r == 10):
-        bot.send_message(message.chat.id, 'Yes')
+        a = 'Yes'
     elif (r == 11):
-        bot.send_message(message.chat.id, 'Reply hazy, try again')
+        a = 'Reply hazy, try again'
     elif (r == 12):
-        bot.send_message(message.chat.id, 'Ask again later')
+        a = 'Ask again later'
     elif (r == 13):
-        bot.send_message(message.chat.id, 'Better not tell you now')
+        a = 'Better not tell you now'
     elif (r == 14):
-        bot.send_message(message.chat.id, 'Cannot predict now')
+        a = 'Cannot predict now'
     elif (r == 15):
-        bot.send_message(message.chat.id, 'Concentrate and ask again')
+        a = 'Concentrate and ask again'
     elif (r == 16):
-        bot.send_message(message.chat.id, 'Don’t count on it')
+        a = 'Don’t count on it'
     elif (r == 17):
-        bot.send_message(message.chat.id, 'My reply is no')
+        a = 'My reply is no'
     elif (r == 18):
-        bot.send_message(message.chat.id, 'My sources say no')
+        a = 'My sources say no'
     elif (r == 19):
-        bot.send_message(message.chat.id, 'Outlook not so good')
+        a = 'Outlook not so good'
     elif (r == 20):
-        bot.send_message(message.chat.id, 'Very doubtful')
-    menuEng(message)
+        a = 'Very doubtful'
 
-
-def menuRus(message):
     markup = types.ReplyKeyboardMarkup()
-    answer = types.KeyboardButton('Получить ответ')
-    settings = types.KeyboardButton('Настройки')
+    answer = types.KeyboardButton('Get the answer')
+    settings = types.KeyboardButton('Settings')
+    author = types.KeyboardButton('Author')
     markup.row(answer)
     markup.row(settings)
-    bot.send_message(message.chat.id, 'Задай вопрос', reply_markup=markup)
+    markup.row(author)
+    bot.send_message(message.chat.id, a, reply_markup=markup)
 
 
 def answerRus(message):
     r = random.randint(1, 20)
     if (r == 1):
-        bot.send_message(message.chat.id, 'Бесспорно')
+        a = 'Бесспорно'
     elif (r == 2):
-        bot.send_message(message.chat.id, 'Предрешено')
+        a = 'Предрешено'
     elif (r == 3):
-        bot.send_message(message.chat.id, 'Никаких сомнений')
+        a = 'Никаких сомнений'
     elif (r == 4):
-        bot.send_message(message.chat.id, 'Определённо да')
+        a = 'Определённо да'
     elif (r == 5):
-        bot.send_message(message.chat.id, 'Можешь быть уверен в этом')
+        a = 'Можешь быть уверен в этом'
     elif (r == 6):
-        bot.send_message(message.chat.id, 'Мне кажется — да')
+        a = 'Мне кажется — да'
     elif (r == 7):
-        bot.send_message(message.chat.id, 'Вероятнее всего')
+        a = 'Вероятнее всего'
     elif (r == 8):
-        bot.send_message(message.chat.id, 'Хорошие перспективы')
+        a = 'Хорошие перспективы'
     elif (r == 9):
-        bot.send_message(message.chat.id, 'Знаки говорят — да')
+        a = 'Знаки говорят — да'
     elif (r == 10):
-        bot.send_message(message.chat.id, 'Да')
+        a = 'Да'
     elif (r == 11):
-        bot.send_message(message.chat.id, 'Пока не ясно, попробуй снова')
+        a = 'Пока не ясно, попробуй снова'
     elif (r == 12):
-        bot.send_message(message.chat.id, 'Спроси позже')
+        a = 'Спроси позже'
     elif (r == 13):
-        bot.send_message(message.chat.id, 'Лучше не рассказывать')
+        a = 'Лучше не рассказывать'
     elif (r == 14):
-        bot.send_message(message.chat.id, 'Сейчас нельзя предсказать')
+        a = 'Сейчас нельзя предсказать'
     elif (r == 15):
-        bot.send_message(message.chat.id, 'Сконцентрируйся и спроси опять')
+        a = 'Сконцентрируйся и спроси опять'
     elif (r == 16):
-        bot.send_message(message.chat.id, 'Даже не думай')
+        a = 'Даже не думай'
     elif (r == 17):
-        bot.send_message(message.chat.id, 'Мой ответ — нет')
+        a = 'Мой ответ — нет'
     elif (r == 18):
-        bot.send_message(message.chat.id, 'По моим данным — нет')
+        a = 'По моим данным — нет'
     elif (r == 19):
-        bot.send_message(message.chat.id, 'Перспективы не очень хорошие')
+        a = 'Перспективы не очень хорошие'
     elif (r == 20):
-        bot.send_message(message.chat.id, 'Весьма сомнительно')
-    menuRus(message)
+        a = 'Весьма сомнительно'
+
+    markup = types.ReplyKeyboardMarkup()
+    answer = types.KeyboardButton('Получить ответ')
+    settings = types.KeyboardButton('Настройки')
+    author = types.KeyboardButton('Автор')
+    markup.row(answer)
+    markup.row(settings)
+    markup.row(author)
+    bot.send_message(message.chat.id, a, reply_markup=markup)
 
 
 def settings(message):
@@ -128,16 +126,27 @@ def settings(message):
     bot.send_message(message.chat.id, 'Choose the language', reply_markup=markup)
 
 
+def authorEng(message):
+    engAuthorVar = 'Name:\nAndrew Demchenko\n\nSkill:\nJunior Python Developer\n\nE-Mail:\nandrewdemchenkodeveloper@gmail.com'
+    bot.send_message(message.chat.id, engAuthorVar)
+
+
+def authorRus(message):
+    rusAuthorVar = 'Имя:\nАндрей Демченко\n\nНавык:\nJunior Python Developer\n\nE-Mail:\nandrewdemchenkodeveloper@gmail.com'
+    bot.send_message(message.chat.id, rusAuthorVar)
+
+
 def main(message):
-    if (message.text == 'English'):
-        menuEng(message)
-    elif (message.text == 'Get the answer'):
+    if (message.text in ['English', 'Get the answer']):
         answerEng(message)
-    elif (message.text == 'Русский'):
-        menuRus(message)
-    elif (message.text == 'Получить ответ'):
+    elif (message.text in ['Русский', 'Получить ответ']):
         answerRus(message)
     elif (message.text in ['Settings', 'Настройки']):
         settings(message)
+    elif (message.text == 'Author'):
+        authorEng(message)
+    elif(message.text == 'Автор'):
+        authorRus(message)
+
 
 
